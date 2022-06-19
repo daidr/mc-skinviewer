@@ -1,0 +1,158 @@
+.d-skin-aciton-rotate .d-skin-main-rotate {
+    animation: d-skin-action-rotate 15s linear infinite;
+}
+
+@keyframes d-skin-action-rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* 走路动画 */
+.d-skin-aciton-walk .d-skin-arm-left {
+    animation: d-skin-action-walk-arm-left 2s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-walk-arm-left {
+    0% {
+        transform: rotateX(-20deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(20deg) rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateX(-20deg) rotateZ(0deg);
+    }
+}
+
+.d-skin-aciton-walk .d-skin-arm-right {
+    animation: d-skin-action-walk-arm-right 2s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-walk-arm-right {
+    0% {
+        transform: rotateX(20deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(-20deg) rotateZ(3deg);
+    }
+    100% {
+        transform: rotateX(20deg) rotateZ(0deg);
+    }
+}
+
+.d-skin-aciton-walk .d-skin-leg-right {
+    animation: d-skin-action-walk-leg-left 2s ease-in-out infinite;
+}
+
+.d-skin-aciton-walk .d-skin-leg-left {
+    animation: d-skin-action-walk-leg-right 2s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-walk-leg-left {
+    0% {
+        transform: rotateX(-20deg);
+    }
+    50% {
+        transform: rotateX(20deg);
+    }
+    100% {
+        transform: rotateX(-20deg);
+    }
+}
+
+@keyframes d-skin-action-walk-leg-right {
+    0% {
+        transform: rotateX(20deg);
+    }
+    50% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        transform: rotateX(20deg);
+    }
+}
+
+/* 跑步 */
+.d-skin-aciton-run .d-skin-arm-left {
+    animation: d-skin-action-run-arm-left 0.8s ease-in-out infinite;
+}
+
+.d-skin-aciton-run .d-skin-arm-right {
+    animation: d-skin-action-run-arm-right 0.8s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-run-arm-left {
+    0% {
+        transform: rotateX(-60deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(60deg) rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateX(-60deg) rotateZ(0deg);
+    }
+}
+
+@keyframes d-skin-action-run-arm-right {
+    0% {
+        transform: rotateX(60deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(-60deg) rotateZ(10deg);
+    }
+    100% {
+        transform: rotateX(60deg) rotateZ(0deg);
+    }
+}
+
+.d-skin-aciton-run .d-skin-leg-right {
+    animation: d-skin-action-run-leg-left 0.8s ease-in-out infinite;
+}
+
+.d-skin-aciton-run .d-skin-leg-left {
+    animation: d-skin-action-run-leg-right 0.8s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-run-leg-left {
+    0% {
+        transform: rotateX(-70deg);
+    }
+    50% {
+        transform: rotateX(70deg);
+    }
+    100% {
+        transform: rotateX(-70deg);
+    }
+}
+
+@keyframes d-skin-action-run-leg-right {
+    0% {
+        transform: rotateX(70deg);
+    }
+    50% {
+        transform: rotateX(-70deg);
+    }
+    100% {
+        transform: rotateX(70deg);
+    }
+}
+
+.d-skin-aciton-run .d-skin-main-translate {
+    animation: d-skin-action-run-main 0.4s ease-in-out infinite;
+}
+
+@keyframes d-skin-action-run-main {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
