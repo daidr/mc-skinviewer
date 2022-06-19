@@ -559,7 +559,7 @@
             this[_ELEMENTS] = initElement(container);
 
             // 初始化皮肤类型
-            this[_SKIN_TYPE] = this.SKIN_TYPE.STEVE;
+            this[_SKIN_TYPE] = SkinViewer.SKIN_TYPE.STEVE;
 
             // 初始化皮肤
             this[_SKIN] = _DEAFULT_SKIN;
@@ -581,7 +581,7 @@
         // 设置皮肤类型
         setSkinType(skinType) {
             // 倘若皮肤类型错误，则不做任何操作
-            if (skinType !== this.SKIN_TYPE.STEVE && skinType !== this.SKIN_TYPE.ALEX) return;
+            if (skinType !== SkinViewer.SKIN_TYPE.STEVE && skinType !== SkinViewer.SKIN_TYPE.ALEX) return;
 
             // 倘若皮肤类型没有变化，则不做任何操作
             if (skinType === this[_SKIN_TYPE]) return;
