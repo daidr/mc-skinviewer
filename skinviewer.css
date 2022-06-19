@@ -1,0 +1,445 @@
+/* Container */
+/* 仅负责包裹内部元素 */
+.d-skin-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.d-skin-container * {
+    box-sizing: border-box;
+}
+
+/* Main Rotate */
+/* 类似空对象，与 Main 的区别在于，Main 主要负责脚本控制的 transform */
+/* Main Rotate 主要负责 CSS animation 控制的 rotate */
+.d-skin-main-rotate {
+    width: 30%;
+    padding-top: 120%;
+    transform-style: preserve-3d;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Main Translate */
+/* 类似空对象，与 Main 的区别在于，Main 主要负责脚本控制的 transform */
+/* Main Translate 主要负责 CSS animation 控制的 translate */
+.d-skin-main-translate {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+/* Main */
+/* 类似空对象作用，负责整体操作内部元素 */
+.d-skin-main {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.d-skin-main-transition {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Head */
+/* 头部的容器 */
+.d-skin-head {
+    width: 100%;
+    padding-top: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: 50% 100%;
+}
+
+/* Head Inner */
+.d-skin-head-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+/* 头部第一层贴图 */
+.d-skin-head-inner-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+/* Head Outer*/
+.d-skin-head-outer {
+    position: absolute;
+    top: 0;
+    width: 112.5%;
+    margin: -6.25%;
+    transform-style: preserve-3d;
+}
+
+/* 头部第二层贴图 */
+.d-skin-head-outer-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.d-cover-0 {
+    transform: rotateY(-90deg) translateX(50%) rotateY(90deg);
+}
+
+.d-cover-1 {
+    transform: rotateY(-90deg) translateX(-50%) rotateY(-90deg);
+}
+
+.d-cover-2 {
+    transform: translateX(-50%) rotateY(-90deg);
+}
+
+.d-cover-3 {
+    transform: translateX(50%) rotateY(90deg);
+}
+
+.d-cover-4 {
+    transform: rotateZ(-90deg) translateX(50%) rotateY(90deg) rotateZ(90deg);
+}
+
+.d-cover-5 {
+    transform: rotateZ(90deg) translateX(50%) rotateY(-90deg) rotateZ(-90deg);
+}
+
+/* 头部以下容器 */
+.d-skin-underhead {
+    width: 100%;
+    padding-top: 300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform: rotateZ(-90deg) translateX(-100%) rotateZ(90deg);
+}
+
+/* Body */
+/* 身体容器 */
+.d-skin-body {
+    width: 100%;
+    padding-top: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+
+/* Body Inner */
+.d-skin-body-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+/* 身体第一层贴图 */
+.d-skin-body-inner-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+/* Body Outer */
+.d-skin-body-outer {
+    position: absolute;
+    top: 0;
+    width: 112.5%;
+    margin-left: -6.25%;
+    margin-top: -9.375%;
+    transform-style: preserve-3d;
+}
+
+/* 身体第二层贴图 */
+.d-skin-body-outer-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.d-body-cover-0 {
+    transform: rotateY(-90deg) translateX(25%) rotateY(90deg);
+}
+
+.d-body-cover-1 {
+    transform: rotateY(-90deg) translateX(-25%) rotateY(-90deg);
+}
+
+.d-body-cover-2,
+.d-body-cover-3 {
+    width: 50%;
+}
+
+.d-body-cover-2 {
+    transform: translateX(-50%) rotateY(-90deg);
+}
+
+.d-body-cover-3 {
+    transform: translateX(150%) rotateY(90deg);
+}
+
+.d-body-cover-4 {
+    transform: rotateZ(-90deg) translateX(25%) rotateY(90deg) rotateZ(90deg);
+}
+
+.d-body-cover-5 {
+    transform: rotateZ(90deg) translateX(125%) rotateY(-90deg) rotateZ(-90deg);
+}
+
+/* 腿部容器 */
+.d-skin-legs {
+    width: 100%;
+    padding-top: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform: rotateZ(-90deg) translateX(-150%) rotateZ(90deg);
+}
+
+/* 左右腿容器 */
+.d-skin-leg-right,
+.d-skin-leg-left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0;
+}
+
+/* Left/Right Leg Inner */
+.d-skin-leg-right-inner,
+.d-skin-leg-left-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+/* 左右腿第一层贴图 */
+.d-skin-leg-right-inner-cover,
+.d-skin-leg-left-inner-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+/* Left/Right Leg Outer */
+.d-skin-leg-left-outer,
+.d-skin-leg-right-outer {
+    position: absolute;
+    top: 0;
+    width: 112.5%;
+    margin-left: -6.25%;
+    margin-top: -18.75%;
+    transform-style: preserve-3d;
+}
+
+/* 左右腿第二层贴图 */
+.d-skin-leg-left-outer-cover,
+.d-skin-leg-right-outer-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+/* 左腿偏移 */
+.d-skin-leg-left {
+    transform-origin: 50% 0;
+    margin-left: 50%;
+}
+
+.d-leg-cover-0 {
+    transform: rotateY(-90deg) translateX(50%) rotateY(90deg);
+}
+
+.d-leg-cover-1 {
+    transform: rotateY(-90deg) translateX(-50%) rotateY(-90deg);
+}
+
+.d-leg-cover-2 {
+    transform: translateX(-50%) rotateY(-90deg);
+}
+
+.d-leg-cover-3 {
+    transform: translateX(50%) rotateY(90deg);
+}
+
+.d-leg-cover-4 {
+    transform: rotateZ(-90deg) translateX(50%) rotateY(90deg) rotateZ(90deg);
+}
+
+.d-leg-cover-5 {
+    transform: rotateZ(90deg) translateX(250%) rotateY(-90deg) rotateZ(-90deg);
+}
+
+/* 手部容器 */
+.d-skin-arms {
+    width: 100%;
+    padding-top: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+
+/* 左右手容器 */
+.d-skin-arm-right,
+.d-skin-arm-left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0;
+}
+
+/* Left/Right Arm Inner */
+.d-skin-arm-right-inner,
+.d-skin-arm-left-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+/* 左右手第一层贴图 */
+.d-skin-arm-right-inner-cover,
+.d-skin-arm-left-inner-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+/* Left/Right Arm Outer */
+.d-skin-arm-left-outer,
+.d-skin-arm-right-outer {
+    position: absolute;
+    top: 0;
+    width: 112.5%;
+    margin-left: -6.26%;
+    margin-top: -18.75%;
+    transform-style: preserve-3d;
+}
+
+/* 左手偏移 */
+.d-skin-arm-left {
+    transform-origin: 50% 0;
+    margin-left: 100%;
+}
+
+/* 右手偏移 */
+.d-skin-arm-right {
+    transform-origin: 50% 0;
+    margin-left: -50%;
+}
+
+/* 左右手第二层贴图 */
+.d-skin-arm-left-outer-cover,
+.d-skin-arm-right-outer-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.d-arm-cover-0 {
+    transform: rotateY(-90deg) translateX(50%) rotateY(90deg);
+}
+
+.d-arm-cover-1 {
+    transform: rotateY(-90deg) translateX(-50%) rotateY(-90deg);
+}
+
+.d-arm-cover-2 {
+    transform: translateX(-50%) rotateY(-90deg);
+}
+
+.d-arm-cover-3 {
+    transform: translateX(50%) rotateY(90deg);
+}
+
+.d-arm-cover-4 {
+    transform: rotateZ(-90deg) translateX(50%) rotateY(90deg) rotateZ(90deg);
+}
+
+.d-arm-cover-5 {
+    transform: rotateZ(90deg) translateX(250%) rotateY(-90deg) rotateZ(-90deg);
+}
+
+/* ALEX 模型下的左右手 */
+/* Left/Right Arm Inner */
+.d-skin-arms-alex .d-skin-arm-right-inner,
+.d-skin-arms-alex .d-skin-arm-left-inner {
+    width: 75%;
+}
+
+/* Left/Right Arm Outer */
+.d-skin-arms-alex .d-skin-arm-left-outer,
+.d-skin-arms-alex .d-skin-arm-right-outer {
+    width: 83.33%;
+    margin-left: -5%;
+    margin-top: -16.66%;
+}
+
+/* 左手偏移 */
+.d-skin-arms-alex .d-skin-arm-left {
+    transform-origin: 33.33% 0;
+    margin-left: 100%;
+}
+
+/* 右手偏移 */
+.d-skin-arms-alex .d-skin-arm-right {
+    transform-origin: 36.5% 0;
+    margin-left: -37.5%;
+}
+
+.d-skin-arms-alex .d-arm-cover-0 {
+    transform: rotateY(-90deg) translateX(66.66%) rotateY(90deg);
+}
+
+.d-skin-arms-alex .d-arm-cover-1 {
+    transform: rotateY(-90deg) translateX(-66.66%) rotateY(-90deg);
+}
+
+.d-skin-arms-alex .d-arm-cover-2 {
+    transform: translateX(-50%) rotateY(-90deg);
+    width: 133.33%;
+}
+
+.d-skin-arms-alex .d-arm-cover-3 {
+    transform: translateX(25%) rotateY(90deg);
+    width: 133.33%;
+}
+
+.d-skin-arms-alex .d-arm-cover-4 {
+    transform: rotateZ(-90deg) translateX(66.66%) rotateY(90deg) rotateZ(90deg);
+}
+
+.d-skin-arms-alex .d-arm-cover-5 {
+    transform: rotateZ(90deg) translateX(333.29%) rotateY(-90deg) rotateZ(-90deg);
+}
