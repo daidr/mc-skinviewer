@@ -2,6 +2,7 @@
     width: 600px;
     height: 670px;
     background: #f7f7f7;
+    touch-action: none;
 }
 
 .skinviewer-container > div {
