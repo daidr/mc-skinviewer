@@ -1,3 +1,4 @@
+/* 360° 旋转 */
 .d-skin-aciton-rotate .d-skin-main-rotate {
     animation: d-skin-action-rotate 15s linear infinite;
 }
@@ -9,6 +10,11 @@
     100% {
         transform: rotateY(360deg);
     }
+}
+
+/* 旋转动画暂停 */
+.d-skin-aciton-rotate.d-skin-aciton-rotate-paused .d-skin-main-rotate {
+    animation-play-state: paused !important;
 }
 
 /* 走路动画 */
@@ -155,4 +161,13 @@
     100% {
         transform: translateY(-20px);
     }
+}
+
+/* 骨骼动画暂停 */
+.d-skin-aciton-skeleton-paused .d-skin-leg-right,
+.d-skin-aciton-skeleton-paused .d-skin-leg-left,
+.d-skin-aciton-skeleton-paused .d-skin-arm-right,
+.d-skin-aciton-skeleton-paused .d-skin-arm-left,
+.d-skin-aciton-skeleton-paused .d-skin-main-translate {
+    animation-play-state: paused !important;
 }
