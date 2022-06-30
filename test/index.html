@@ -14,6 +14,54 @@
 <body>
     <div class="skinviewer-container d-skin-aciton-rotate d-skin-aciton-run">
     </div>
+    <div class="controls">
+        <p>
+            <input type="checkbox" id="control_1" data-classname="d-skin-aciton-rotate-paused"
+                onchange="changeSkinViewerClassName(event)">
+            <label for="control_1">暂停旋转 (Pause rotation)</label>
+        </p>
+        <p>
+            <input type="checkbox" id="control_2" data-classname="d-skin-aciton-skeleton-paused"
+                onchange="changeSkinViewerClassName(event)">
+            <label for="control_2">暂停骨骼动画 (Pause skeleton animation)</label>
+        </p>
+        <p>
+            <label for="control_3">选择骨骼动画 (Select skeleton animation)</label>
+            <select id="control_3" onchange="changeSkeletonAnimation(event)">
+                <option value="none">无动画 (No animation)</option>
+                <option value="walk">走 (walk)</option>
+                <option value="run" selected>跑 (run)</option>
+            </select>
+        </p>
+        
+    </div>
+    <script>
+        {
+            let skinViewer = document.querySelector('.skinviewer-container');
+            window.changeSkinViewerClassName = function (event) {
+                let className = event.target.dataset.classname.split(',');
+                let state = event.target.checked;
+                if (state) {
+                    skinViewer.classList.add(...className);
+                } else {
+                    skinViewer.classList.remove(...className);
+                }
+            }
+            window.changeSkeletonAnimation = function (event) {
+                let animationName = event.target.value;
+                if (animationName === 'none') {
+                    skinViewer.classList.remove('d-skin-aciton-walk');
+                    skinViewer.classList.remove('d-skin-aciton-run');
+                } else if (animationName === 'walk') {
+                    skinViewer.classList.remove('d-skin-aciton-run');
+                    skinViewer.classList.add('d-skin-aciton-walk');
+                } else if (animationName === 'run') {
+                    skinViewer.classList.remove('d-skin-aciton-walk');
+                    skinViewer.classList.add('d-skin-aciton-run');
+                }
+            }
+        }
+    </script>
     <script src="../skinviewer.js"></script>
     <script src="./main.js"></script>
     <a href="https://github.com/daidr/mc-skinviewer" target="_blank">Github</a>
