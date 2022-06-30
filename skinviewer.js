@@ -173,10 +173,16 @@
         skinContainer.classList.add('d-skin-container');
         elements.skinContainer = skinContainer;
 
+        // 创建整体容器 d-skin-main
+        const skinMain = document.createElement('div');
+        skinMain.classList.add('d-skin-main');
+        skinContainer.appendChild(skinMain);
+        elements.skinMain = skinMain;
+
         // 创建整体容器旋转层 d-skin-main-rotate
         const skinMainRotate = document.createElement('div');
         skinMainRotate.classList.add('d-skin-main-rotate');
-        skinContainer.appendChild(skinMainRotate);
+        skinMain.appendChild(skinMainRotate);
         elements.skinMainRotate = skinMainRotate;
 
         // 创建整体容器位移层 d-skin-main-translate
@@ -185,16 +191,10 @@
         skinMainRotate.appendChild(skinMainTranslate);
         elements.skinMainTranslate = skinMainTranslate;
 
-        // 创建整体容器 d-skin-main
-        const skinMain = document.createElement('div');
-        skinMain.classList.add('d-skin-main');
-        skinMainTranslate.appendChild(skinMain);
-        elements.skinMain = skinMain;
-
         // 创建头部容器 d-skin-head
         const skinHead = document.createElement('div');
         skinHead.classList.add('d-skin-head');
-        skinMain.appendChild(skinHead);
+        skinMainTranslate.appendChild(skinHead);
         elements.skinHead = skinHead;
 
         // 创建头部内部容器 d-skin-head-inner
@@ -236,7 +236,7 @@
         // 创建头部以下容器 d-skin-underhead
         const skinUnderHead = document.createElement('div');
         skinUnderHead.classList.add('d-skin-underhead');
-        skinMain.appendChild(skinUnderHead);
+        skinMainTranslate.appendChild(skinUnderHead);
         elements.skinUnderHead = skinUnderHead;
 
         // 创建身体容器 d-skin-body
