@@ -86,6 +86,10 @@ SkinViewer 的 `setSkin` 方法接收一个 skin 参数，这个参数可以是 
 
 `d-skin-aciton-run` - 将会循环播放跑步动画
 
+`d-skin-aciton-rotate-paused` - 将会暂停旋转动画
+
+`d-skin-action-skeleton-paused` - 将会暂停骨骼动画
+
 ### 简单交互
 
 当然，你也许会需要一些简单的交互，比如通过拖动来旋转视角。那么，你可以试试监听父容器的相关事件，实现所需要的交互。
