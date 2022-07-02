@@ -70,7 +70,7 @@ SkinViewer 的 `setSkin` 方法接收一个 skin 参数，这个参数可以是 
 
 不过，我们默认提供了一个动画样式库 `skinviewer-animation.css`，包含了诸如 360°旋转、走路、跑步等一系列的常见动画。
 
-提示：你可以对 头部、手部、腿部的容器进行 transform 操作，但不能对容器内的子元素执行 transform 操作。
+提示：你可以对 头部、手部、腿部的容器进行 transform 操作，且 transform-origin 已经被默认设置为正确的位置，但不能对容器内的子元素(如类名为_cover结尾的元素)执行 transform 操作。
 
 ```html
 <link rel="stylesheet" href="skinviewer-animation.css">
