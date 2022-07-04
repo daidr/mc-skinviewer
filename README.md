@@ -142,6 +142,9 @@ let container = document.querySelector('.my-custom-skinviewer');
 
 - [ ] 非标准皮肤尺寸(高像素或64*32)
 
+- [ ] 披风材质支持
+
+- [ ] 特殊模型材质支持(耳朵)
 
 
 ## 协议
