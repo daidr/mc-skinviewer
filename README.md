@@ -136,11 +136,11 @@ let container = document.querySelector('.my-custom-skinviewer');
 
 ## 功能实现
 
-[x] 完整的动画支持
+- [x] 完整的动画支持
 
-[x] steve 和 alex 模型皮肤支持
+- [x] steve 和 alex 模型皮肤支持
 
-[ ] 非标准皮肤尺寸(高像素或64*32)
+- [ ] 非标准皮肤尺寸(高像素或64*32)
 
 
 
