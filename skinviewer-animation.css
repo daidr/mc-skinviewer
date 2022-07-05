@@ -5,10 +5,10 @@
 
 @keyframes d-skin-action-rotate {
     0% {
-        transform: rotateY(0deg);
+        transform: rotate3d(0, 1, 0, 0deg);
     }
     100% {
-        transform: rotateY(360deg);
+        transform: rotate3d(0, 1, 0, 360deg);
     }
 }
 
@@ -60,25 +60,25 @@
 
 @keyframes d-skin-action-walk-leg-left {
     0% {
-        transform: rotateX(-20deg);
+        transform: rotate3d(1, 0, 0, -20deg);
     }
     50% {
-        transform: rotateX(20deg);
+        transform: rotate3d(1, 0, 0, 20deg);
     }
     100% {
-        transform: rotateX(-20deg);
+        transform: rotate3d(1, 0, 0, -20deg);
     }
 }
 
 @keyframes d-skin-action-walk-leg-right {
     0% {
-        transform: rotateX(20deg);
+        transform: rotate3d(1, 0, 0, 20deg);
     }
     50% {
-        transform: rotateX(-20deg);
+        transform: rotate3d(1, 0, 0, -20deg);
     }
     100% {
-        transform: rotateX(20deg);
+        transform: rotate3d(1, 0, 0, 20deg);
     }
 }
 
@@ -125,25 +125,25 @@
 
 @keyframes d-skin-action-run-leg-left {
     0% {
-        transform: rotateX(-70deg);
+        transform: rotate3d(1, 0, 0, -70deg);
     }
     50% {
-        transform: rotateX(70deg);
+        transform: rotate3d(1, 0, 0, 70deg);
     }
     100% {
-        transform: rotateX(-70deg);
+        transform: rotate3d(1, 0, 0, -70deg);
     }
 }
 
 @keyframes d-skin-action-run-leg-right {
     0% {
-        transform: rotateX(70deg);
+        transform: rotate3d(1, 0, 0, 70deg);
     }
     50% {
-        transform: rotateX(-70deg);
+        transform: rotate3d(1, 0, 0, -70deg);
     }
     100% {
-        transform: rotateX(70deg);
+        transform: rotate3d(1, 0, 0, 70deg);
     }
 }
 
@@ -153,13 +153,13 @@
 
 @keyframes d-skin-action-run-main {
     0% {
-        transform: translateY(-20px);
+        transform: translate3d(0, -20px, 0);
     }
     50% {
-        transform: translateY(20px);
+        transform: translate3d(0, 20px, 0);
     }
     100% {
-        transform: translateY(-20px);
+        transform: translate3d(0, -20px, 0);
     }
 }
 
